@@ -172,7 +172,7 @@ str1 = "hello world"
 print(str1.endswith("d"))
 print(str1.endswith("ld"))
 print(str1.endswith("lo"))
-print(str1.endswith("lo", 1, 5))    # 结尾是开区间
+print(str1.endswith("lo", 1, 5))  # 结尾是开区间
 print(str1.endswith(("d", "lo")))  # 元组中只要一个元素满足即可
 print('################################')
 # str.isdigit()
@@ -180,9 +180,83 @@ print('################################')
 string = '1234'  # true
 print(string.isdigit())
 
-string = '-1234'    # false
+string = '-1234'  # false
 print(string.isdigit())
 
-string = '1.234'    # false
+string = '1.234'  # false
 print(string.isdigit())
 
+# str.split(sep=None, maxsplit=-1)
+# sep:分隔符，不指定时默认所有的空白符（空格、换行、制表符），并丢弃结果中的空字符串
+# maxsplit:最大分隔符次数，默认不限制分割次数
+# 通过指定的分隔符对字符串进行分割，以列表的形式返回
+s = " Line \nLine2    \tLine3"
+print(s.split('Li'))
+print(s.split(' '))
+print(s.split())
+print(s.split('Li', 2))
+
+# str.join(iterable)
+# iterable:包括string,list,tuple,dict,set等等
+# 将可迭代对象中的元素（元素必须是字符串）以指定的字符串连接，返回新的字符串
+# iterable里的除最后一个字符外，其余字符每个字符后面都加上str
+s = '-.'
+s1 = 'hello world'
+print(s.join(s1))  # h-.e-.l-.l-.o-. -.w-.o-.r-.l-.d
+s2 = ['1', '2', '3', '4']
+print(s.join(s2))  # 1-.2-.3-.4
+s3 = ('1', '2', '3', '4')
+print(s.join(s3))  # 1-.2-.3-.4
+print('##########################')
+# 字典作为iterable，只有键参与迭代
+s4 = {'height': 175, 'weight': 65}
+print(s.join(s4))
+s5 = {'5', 'hello', '789', 'world'}
+print(s.join(s5))
+print('##########################')
+# str.count(sub,[start[,end])
+# sub:需要查找的字符串
+# start:开始索引，默认为0
+# end:结束索引（开区间），默认为len(str)
+# 返回sub在字符串中出现的非重叠的次数
+s = "hello world"
+print(s.count('l'))
+print(s.count('l', 3))
+print(s.count('l', 3, 6))
+print(s.count('l', 4, 6))
+print('##########################')
+# str.find(sub[,start[,end]])
+# 返回从左边开始第一次找到指定字符串时的正向索引，找不到就返回-1
+# str.rfind(sub[,start[,end]])
+# 返回从右边开始第一次找到指定字符串时的正向索引，找不到就返回-1
+# str.index(sub[,start[,end]])
+# 返回从左边开始第一次找到指定字符串时的正向索引，找不到就报错
+# str.rindex(sub[,start[,end]])
+# 返回从右边开始第一次找到指定字符串时的正向索引，找不到就报错
+# sub:需要查找的字符串
+# start:开始索引，默认为0
+# end:结束索引（开区间），默认为len(str)
+s = 'hello world'
+print(s.find('l'))  # 2
+print(s.rfind('l'))  # 9
+print(s.find('lo'))  # 3
+print(s.rfind('lo'))  # 3
+
+print(s.index('l'))  # 2
+print(s.rindex('l'))  # 9
+print(s.index('lo'))  # 3
+print(s.rindex('lo'))  # 3
+
+print(s.find('ol'))  # -1
+print(s.rfind('ol'))  # -1
+
+print('##########################')
+s = '你好hELlo wo?rLD世界TuP'
+# 将字符串的首字母变成大写，其他字母变小写，并返回
+print(s.capitalize())   # 你好hello wo?rld世界tup
+# 将字符串中所有单词的首字母变成大写，其他字母变小写，并返回
+print(s.title())    # 你好Hello Wo?Rld世界Tup
+# 将字符串中所有字符变成大写，并返回
+print(s.upper())    # 你好HELLO WO?RLD世界TUP
+# 将字符串中所有大写字符变成小写，小写字符变大写，并返回
+print(s.swapcase())  # 你好HelLO WO?Rld世界tUp
