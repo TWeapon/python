@@ -253,10 +253,93 @@ print(s.rfind('ol'))  # -1
 print('##########################')
 s = '你好hELlo wo?rLD世界TuP'
 # 将字符串的首字母变成大写，其他字母变小写，并返回
-print(s.capitalize())   # 你好hello wo?rld世界tup
+print(s.capitalize())  # 你好hello wo?rld世界tup
 # 将字符串中所有单词的首字母变成大写，其他字母变小写，并返回
-print(s.title())    # 你好Hello Wo?Rld世界Tup
+print(s.title())  # 你好Hello Wo?Rld世界Tup
 # 将字符串中所有字符变成大写，并返回
-print(s.upper())    # 你好HELLO WO?RLD世界TUP
+print(s.upper())  # 你好HELLO WO?RLD世界TUP
 # 将字符串中所有大写字符变成小写，小写字符变大写，并返回
 print(s.swapcase())  # 你好HelLO WO?Rld世界tUp
+
+# 列表
+# 特性：可变、是序列
+# 列表用方括号定义，元素没有类型限制
+
+list0 = []
+list1 = ['China', 1997, 2000]
+list2 = [1, 2, 3, 4, 5]
+list3 = ["a", "b", "c", "d"]
+list4 = ["red", "green", "blue", "yellow", "white", 'black']
+
+# 修改列表
+# 列表是可变的，可以通过索引和切片的方式来对列表的元素重新赋值
+lst = [567, 'hello', 78.9, 'world', False]
+"""
+针对一个元素：
+格式：lst[index] = object
+"""
+lst[2] = 9.87
+lst[3] = 'dlrow'
+print(lst)
+
+"""
+针对多个元素：
+格式： lst[start:end:step]=iterable
+"""
+
+# 1 vs 1
+lst[2:3] = [9.87]
+# n vs n
+lst[2:4] = [9.87, 'dlrow']
+
+# step 为1，可以 1 vs n
+
+lst[2:3] = [7, 8, 9]
+
+# step为1，可以 n vs m
+lst[2:4] = [1, 2, 3]
+lst[1:4] = [1, 2]
+
+# step为1,可以1 vs 0
+lst[2:3] = []
+
+# step为1，可以 n vs 0
+
+lst[1:4] = []
+
+# step不为1，只能n vs n
+# lst[1::2] = ['a', 'b']
+
+# 插入一个元素
+lst[0:0] = ['a']
+lst[1:1] = ['b']
+lst[len(lst):] = ['c']
+
+# 插入多个元素
+lst[0:0] = ['a', 'b', 'c']
+lst[1:1] = ['d', 'f']
+lst[len(lst):] = ['x', 'y', 'z']
+print(lst)
+
+# list([iterable])
+# 将一个iterable对象转化为列表并返回，如果没有实参，则返回空列表
+print(list())
+print(list("hello"))
+print(list((1, 2, 3)))
+
+# 字典作为一个iterable,只有键参与迭代
+print(list({1: 2, 3: 4}))
+print(list({'a', 'b', 'c', 789, 456}))
+
+# list.append(object)
+# 往列表中追加一个元素，无返回值，相当于lst[len(lst):]=[object]
+lst = [1, 2, 3]
+lst.append(4)
+print(lst)
+lst.append([5, 6])
+print(lst)
+# list.extend(iterable)
+# 使用iterable中的所有元素来扩展列表，无返回值，相当于lst[len(lst):]=iterable
+lst = [1, 2, 3]
+lst.extend([5, 6])
+print(lst)
