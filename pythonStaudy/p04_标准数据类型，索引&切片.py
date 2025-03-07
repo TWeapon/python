@@ -343,3 +343,130 @@ print(lst)
 lst = [1, 2, 3]
 lst.extend([5, 6])
 print(lst)
+
+# list.insert(index,object)
+# index:要插入元素的位置
+# object:要插入的元素
+# 在指定位置插入一个元素，无返回值
+lst = [1, 2, 3, 4]
+lst.insert(1, ['a', 'b'])
+print(lst)
+
+# list.sort([key],reverse = False)
+# key:指定一个函数，在排序之前，列表每个元素先应用这个函数
+# 再根据函数的返回值对原数据进行排序
+# reverse:默认为False,代表升序，指定为True则为降序
+# 对原列表进行排序，无返回值
+lst = [1, 2, -5, -3]
+# 升序排序
+lst.sort()
+print(lst)  # [-5, -3, 1, 2]
+
+lst = [1, 2, -5, -3]
+lst.sort(reverse=True)  # [2, 1, -3, -5]
+print(lst)
+
+# chr(i) 返回Unicode码位为指定整数的字符
+# ord(c) 返回指定字符对应的Unicode码位
+print(chr(97))  # a
+print(ord('a'))  # 97
+
+# 字符串在大小比较时是逐个字符进行比较的
+# 根据字符在编码表里的位置
+lst = ['10', '2', '1', '-3', '101']
+print(ord('1'))  #
+print(ord('2'))  #
+print(ord('1'))  #
+print(ord('-'))  #
+print(ord('1'))  #
+print(ord('0'))  #
+
+lst.sort()
+print(lst)
+
+# abs(number) 内置函数，返回number的绝对值
+print(abs(9))
+print(abs(9.89))
+print(abs(0))
+print(abs(-9))
+print(abs(-9.87))
+print(abs(True))  # 1
+print(abs(False))  # 0
+print(abs(3 + 4j))  # 求模，5.0 模为 sqrt(3^2 + 4^2)，即 sqrt(9 + 16)，结果为5.0
+
+"""
+
+对lst中的元素按照绝对值的大小降序排序
+
+把lst中的每个元素依次作为实参传递给key所指定的函数去调用，即：
+abs(1) abs(2) abs-5) abs(-3)
+返回值分别为：1,2,5,3
+根据返回值的大小对原数据进行排序
+"""
+lst = [1, 2, -5, -3]
+lst.sort(key=abs, reverse=True)
+print(lst)
+
+# sorted(iterable,[key],reverse=False)
+# iterable:要排序的可迭代对象
+# key:指定一个函数，在排序之前，每个元素都先应用这个函数
+# 之后再排序
+# reverse:默认为False,代表升序，指定为True则为降序
+# 对可迭代对象进行排序，以列表形式返回排序之后的结果
+
+lst = [1, 2, -5, -3]
+# 升序排序
+print(sorted(lst))
+# 降序排序
+print(sorted(lst, reverse=True))
+
+# 对lst中的元素按照绝对值的大小降序排序
+print(sorted(lst, key=abs, reverse=True))
+# 对字符串排序
+print(sorted('hello world'))
+
+# list.reverse()
+# 把列表中的元素倒过来，无返回值
+lst = [1, 3, 5, 2]
+lst.reverse()
+print(lst)
+lst = [1, 3, 5, 2]
+print(lst[::-1])
+# list.count(x)
+# 返回元素x在列表中出现的次数
+lst = [1, 2, 3, '23', [2, 4]]
+print(lst.count(2))  # 1
+
+# list.index(x[,start[,end]])
+# x:要找的值
+# start:起始索引，默认为0
+# end:结束索引(闭区间)，默认为len(lst)
+# 返回从左边开始第一次找到指定值时的正向索引，找不到报错
+lst = [1, 2, 3, 4, '23', [2, 4]]
+print(lst.index(2))
+# lst.index(2, 4)  # valueError
+# list.pop(i=-1)
+# i:要删除并返回的元素的索引
+# 删除列表中指定索引的元素并返回该元素，默认最后一个
+# 索引超出范围，则报错
+lst = [567, 'hello', True, False, 456]
+print(lst.pop(1))  # 'hello'
+print(lst)  #
+# list.remove(x)
+# 删除列表中从左往右遇到的第一个x元素，无返回值
+# 如果没有这样的元素，则报错
+lst = [1, 2, 4, 2, 3, 3]
+lst.remove(2)
+lst.remove(2)
+print(lst)
+# list.copy()
+# 返回该列表的一个副本，等价于lst[:]
+lst = [567, 'hello', True, False, 456]
+new_lst = lst.copy()
+print(new_lst)
+
+# list.clear()
+# 移除列表中的所有元素，无返回值，等价于del lst[:]
+lst = [567, 'hello', True, False, 456]
+lst.clear()
+print(lst)      # []
