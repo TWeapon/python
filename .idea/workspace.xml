@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5b2d0eb-40b2-45b5-a44c-b7dab14f0577" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/pythonStaudy/xxx作业2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pythonStaudy/谭伟鹏作业2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pythonStaudy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pythonStaudy/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pythonStaudy/p04_标准数据类型，索引&amp;切片.py" beforeDir="false" afterPath="$PROJECT_DIR$/pythonStaudy/p04_标准数据类型，索引&amp;切片.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pythonStaudy/pyCharm快捷键.txt" beforeDir="false" afterPath="$PROJECT_DIR$/pythonStaudy/pyCharm快捷键.txt" afterDir="false" />
-    </list>
+    <list default="true" id="a5b2d0eb-40b2-45b5-a44c-b7dab14f0577" name="更改" comment="123" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,27 +33,27 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feture" />
+        <entry key="$PROJECT_DIR$" value="feture122" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/pythonStaudy" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "TWeapon"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;TWeapon&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/TWeapon/python.git",
-    "accountId": "516d9ff3-6aa0-4460-8b70-e912c81de686"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/TWeapon/python.git&quot;,
+    &quot;accountId&quot;: &quot;516d9ff3-6aa0-4460-8b70-e912c81de686&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2u5AmHb0PNF9Sh0JiWW26jD2IkJ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -68,7 +62,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "feture",
     "last_opened_file_path": "D:/PythonProject/python"
   }
 }]]></component>
@@ -88,6 +82,23 @@
       <option name="presentableId" value="Default" />
       <updated>1741528219332</updated>
     </task>
+    <task id="LOCAL-00001" summary="123">
+      <option name="closed" value="true" />
+      <created>1741528691653</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1741528691653</updated>
+    </task>
+    <task id="LOCAL-00002" summary="123">
+      <option name="closed" value="true" />
+      <created>1741528989976</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1741528989976</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -117,5 +128,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="123" />
+    <option name="LAST_COMMIT_MESSAGE" value="123" />
   </component>
 </project>
