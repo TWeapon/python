@@ -35,12 +35,21 @@ print(tup)
 例如： 
 输入 appgbcdcdho    输出：其中有 a b c d g h o p 8种英文字母
 """
+# inputValue = input("请输入一串小写字母\n")
+# dic = dict(zip(inputValue, inputValue))  # 将输入的字符串转化成字典,字典会自动去重
+# ls = list(dic.keys())   # 取出字典的key转为key的新视图再转为列表
+# ls.sort()   # 对列表进行升序排序
+# itemStr = ''  # 定义空字符串进行结果字符串的重组
+# for item in ls:
+#     itemStr += item  # 循环取出列表中的每个元素进行字符串拼接
+# res = ' '.join(itemStr)  # 将取出的字符串进行空格格式
+# print(f"其中有 {res} {len(ls)}种英文字母")
+
 inputValue = input("请输入一串小写字母\n")
-dic = dict(zip(inputValue, inputValue))  # 将输入的字符串转化成字典,字典会自动去重
-ls = list(dic.keys())   # 取出字典的key转为key的新视图再转为列表
-ls.sort()   # 对列表进行升序排序
-itemStr = ''  # 定义空字符串进行结果字符串的重组
-for item in ls:
-    itemStr += item  # 循环取出列表中的每个元素进行字符串拼接
-res = ' '.join(itemStr)  # 将取出的字符串进行空格格式
-print(f"其中有 {res} {len(ls)}种英文字母")
+ls = list(set(inputValue))
+ls_len = len(ls)
+ls.sort()
+ls = ' '.join(ls)
+print(f"其中有 {ls} {ls_len}种英文字母")
+
+
